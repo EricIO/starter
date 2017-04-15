@@ -1,0 +1,23 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "A web app skeleton",
+  "main": "app.js",
+  "homepage": "github.com:EricIO/starter",
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha -R dot test/"
+  },
+  "author": "Eric Skoglund",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "express": "^4.15.2",
+    "vue": "^2.2.6"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "mocha-cakes-2": "^2.1.0",
+    "supertest": "^3.0.0",
+    "webpack": "^2.4.1"
+  }
+}

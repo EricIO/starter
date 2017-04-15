@@ -1,0 +1,5 @@
+--timeout 7000
+--reporter spec
+--recursive
+--require mocha-cakes-2
+--ui mocha-cakes-2
