@@ -7,6 +7,8 @@ const setup = () => {
   const app = express();
   routes(app);
 
+  app.use('/dist', express.static('dist'));
+
   return app;
 };
 

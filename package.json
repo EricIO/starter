@@ -5,20 +5,33 @@
   "main": "app.js",
   "homepage": "github.com:EricIO/starter",
   "scripts": {
-    "start": "node app.js",
+    "start": "npm run build && node app.js",
+    "build": "npm run build:server && npm run build:client",
+    "build:server": "NODE_ENV=production webpack --progress --hide-modules",
+    "build:client": "NODE_ENV=production webpack --config webpack.server.config.js --progress --hide-modules",
     "test": "mocha -R dot test/"
   },
   "author": "Eric Skoglund",
   "license": "BSD-2-Clause",
   "dependencies": {
     "express": "^4.15.2",
-    "vue": "^2.2.6"
+    "vue": "^2.2.6",
+    "vue-server-renderer": "^2.2.6"
   },
   "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-latest": "^6.24.1",
     "chai": "^3.5.0",
+    "css-loader": "^0.28.0",
     "mocha": "^3.2.0",
     "mocha-cakes-2": "^2.1.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
     "supertest": "^3.0.0",
+    "vue-loader": "^11.3.4",
+    "vue-ssr-webpack-plugin": "^3.0.0",
+    "vue-template-compiler": "^2.2.6",
     "webpack": "^2.4.1"
   }
 }
